@@ -1,0 +1,1873 @@
+SQL> SELECT a FROM asignatura NATURAL JOIN area WHERE ar LIKE 'A%';
+
+A                                                                               
+--------------------------------------------------                              
+ALGEBRA                                                                         
+ANALISIS COMPLEJO                                                               
+ASTRONOMIA                                                                      
+
+SQL> SELECT a FROM asignatura NATURAL JOIN area WHERE ar LIKE '%A';
+
+A                                                                               
+--------------------------------------------------                              
+ALGEBRA                                                                         
+ASTRONOMIA                                                                      
+ENSENANZA DE LA MATEMATICA                                                      
+OPTIMIZACION                                                                    
+CALCULO                                                                         
+
+SQL> SELECT a FROM asignatura JOIN area ON asignatura.car=area.car WHERE ar LIKE '%A';
+
+A                                                                               
+--------------------------------------------------                              
+ALGEBRA                                                                         
+ASTRONOMIA                                                                      
+ENSENANZA DE LA MATEMATICA                                                      
+OPTIMIZACION                                                                    
+CALCULO                                                                         
+
+SQL> SELECT a FROM asignatura INNER JOIN area ON asignatura.car=area.car WHERE ar LIKE '%A';
+
+A                                                                               
+--------------------------------------------------                              
+ALGEBRA                                                                         
+ASTRONOMIA                                                                      
+ENSENANZA DE LA MATEMATICA                                                      
+OPTIMIZACION                                                                    
+CALCULO                                                                         
+
+SQL> SELECT a FROM asignatura LEFT JOIN area ON asignatura.car=area.car WHERE ar LIKE '%A';
+
+A                                                                               
+--------------------------------------------------                              
+ALGEBRA                                                                         
+ASTRONOMIA                                                                      
+ENSENANZA DE LA MATEMATICA                                                      
+OPTIMIZACION                                                                    
+CALCULO                                                                         
+
+SQL> SELECT a FROM asignatura RIGHTLEFT JOIN area ON asignatura.car=area.car WHERE ar LIKE '%A';
+SELECT a FROM asignatura RIGHTLEFT JOIN area ON asignatura.car=area.car WHERE ar LIKE '%A'
+                                                *
+ERROR at line 1:
+ORA-00904: "ASIGNATURA"."CAR": invalid identifier 
+
+
+SQL> SELECT a FROM asignatura RIGHT JOIN area ON asignatura.car=area.car WHERE ar LIKE '%A';
+
+A                                                                               
+--------------------------------------------------                              
+ALGEBRA                                                                         
+ASTRONOMIA                                                                      
+ENSENANZA DE LA MATEMATICA                                                      
+OPTIMIZACION                                                                    
+CALCULO                                                                         
+
+SQL> SELECT a FROM asignatura FULL JOIN area ON asignatura.car=area.car WHERE ar LIKE '%A';
+
+A                                                                               
+--------------------------------------------------                              
+ALGEBRA                                                                         
+ASTRONOMIA                                                                      
+ENSENANZA DE LA MATEMATICA                                                      
+OPTIMIZACION                                                                    
+CALCULO                                                                         
+
+SQL> SELECT a FROM asignatura JOIN area ON asignatura.car=area.car;
+
+A                                                                               
+--------------------------------------------------                              
+BASE DE DATOS                                                                   
+INTELIGENCIA ARTIFICIAL                                                         
+ALMACENES DE DATOS                                                              
+MINERIA DE DATOS                                                                
+INFORMATICA BASICA                                                              
+ALGEBRA                                                                         
+CALCULO                                                                         
+OPTIMIZACION                                                                    
+GESTION DE RIESGOS                                                              
+ASTRONOMIA                                                                      
+ENSENANZA DE LA MATEMATICA                                                      
+
+A                                                                               
+--------------------------------------------------                              
+ANALISIS COMPLEJO                                                               
+
+12 rows selected.
+
+SQL> SELECT a,AR FROM asignatura JOIN area ON asignatura.car=area.car;
+
+A                                                                               
+--------------------------------------------------                              
+AR                                                                              
+------------------------------------------------------------                    
+ALGEBRA                                                                         
+ALGEBRA                                                                         
+                                                                                
+ANALISIS COMPLEJO                                                               
+ANALISIS MATEMATICO                                                             
+                                                                                
+ASTRONOMIA                                                                      
+ASTRONOMIA Y ASTROFISICA                                                        
+                                                                                
+
+A                                                                               
+--------------------------------------------------                              
+AR                                                                              
+------------------------------------------------------------                    
+GESTION DE RIESGOS                                                              
+CIENCIAS DE LA COMPUTACION E INTELIGENCIA ARTIFICIAL                            
+                                                                                
+INTELIGENCIA ARTIFICIAL                                                         
+CIENCIAS DE LA COMPUTACION E INTELIGENCIA ARTIFICIAL                            
+                                                                                
+ENSENANZA DE LA MATEMATICA                                                      
+DIDACTICA DE LA MATEMATICA                                                      
+                                                                                
+
+A                                                                               
+--------------------------------------------------                              
+AR                                                                              
+------------------------------------------------------------                    
+OPTIMIZACION                                                                    
+ESTADISTICA E INVESTIGACION OPERATIVA                                           
+                                                                                
+INFORMATICA BASICA                                                              
+LENGUAJES Y SISTEMAS INFORMATICOS                                               
+                                                                                
+MINERIA DE DATOS                                                                
+LENGUAJES Y SISTEMAS INFORMATICOS                                               
+                                                                                
+
+A                                                                               
+--------------------------------------------------                              
+AR                                                                              
+------------------------------------------------------------                    
+ALMACENES DE DATOS                                                              
+LENGUAJES Y SISTEMAS INFORMATICOS                                               
+                                                                                
+BASE DE DATOS                                                                   
+LENGUAJES Y SISTEMAS INFORMATICOS                                               
+                                                                                
+CALCULO                                                                         
+MATEMATICA APLICADA                                                             
+                                                                                
+
+12 rows selected.
+
+SQL> SELECT a,ar FROM asignatura JOIN area ON asignatura.car=area.car;
+
+A                                                                               
+--------------------------------------------------                              
+AR                                                                              
+------------------------------------------------------------                    
+ALGEBRA                                                                         
+ALGEBRA                                                                         
+                                                                                
+ANALISIS COMPLEJO                                                               
+ANALISIS MATEMATICO                                                             
+                                                                                
+ASTRONOMIA                                                                      
+ASTRONOMIA Y ASTROFISICA                                                        
+                                                                                
+
+A                                                                               
+--------------------------------------------------                              
+AR                                                                              
+------------------------------------------------------------                    
+GESTION DE RIESGOS                                                              
+CIENCIAS DE LA COMPUTACION E INTELIGENCIA ARTIFICIAL                            
+                                                                                
+INTELIGENCIA ARTIFICIAL                                                         
+CIENCIAS DE LA COMPUTACION E INTELIGENCIA ARTIFICIAL                            
+                                                                                
+ENSENANZA DE LA MATEMATICA                                                      
+DIDACTICA DE LA MATEMATICA                                                      
+                                                                                
+
+A                                                                               
+--------------------------------------------------                              
+AR                                                                              
+------------------------------------------------------------                    
+OPTIMIZACION                                                                    
+ESTADISTICA E INVESTIGACION OPERATIVA                                           
+                                                                                
+INFORMATICA BASICA                                                              
+LENGUAJES Y SISTEMAS INFORMATICOS                                               
+                                                                                
+MINERIA DE DATOS                                                                
+LENGUAJES Y SISTEMAS INFORMATICOS                                               
+                                                                                
+
+A                                                                               
+--------------------------------------------------                              
+AR                                                                              
+------------------------------------------------------------                    
+ALMACENES DE DATOS                                                              
+LENGUAJES Y SISTEMAS INFORMATICOS                                               
+                                                                                
+BASE DE DATOS                                                                   
+LENGUAJES Y SISTEMAS INFORMATICOS                                               
+                                                                                
+CALCULO                                                                         
+MATEMATICA APLICADA                                                             
+                                                                                
+
+12 rows selected.
+
+SQL> SELECT a,cd FROM asignatura JOIN area ON asignatura.car=area.car;
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+ALGEBRA                                                     4                   
+ANALISIS COMPLEJO                                           1                   
+ASTRONOMIA                                                  2                   
+GESTION DE RIESGOS                                          3                   
+INTELIGENCIA ARTIFICIAL                                     3                   
+ENSENANZA DE LA MATEMATICA                                  1                   
+OPTIMIZACION                                                3                   
+INFORMATICA BASICA                                          3                   
+MINERIA DE DATOS                                            3                   
+ALMACENES DE DATOS                                          3                   
+BASE DE DATOS                                               3                   
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+CALCULO                                                     1                   
+
+12 rows selected.
+
+SQL> SELECT a,cd FROM asignatura,area;
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+BASE DE DATOS                                               4                   
+INTELIGENCIA ARTIFICIAL                                     4                   
+ALMACENES DE DATOS                                          4                   
+MINERIA DE DATOS                                            4                   
+INFORMATICA BASICA                                          4                   
+ALGEBRA                                                     4                   
+CALCULO                                                     4                   
+OPTIMIZACION                                                4                   
+GESTION DE RIESGOS                                          4                   
+ASTRONOMIA                                                  4                   
+ENSENANZA DE LA MATEMATICA                                  4                   
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+ANALISIS COMPLEJO                                           4                   
+BASE DE DATOS                                               1                   
+INTELIGENCIA ARTIFICIAL                                     1                   
+ALMACENES DE DATOS                                          1                   
+MINERIA DE DATOS                                            1                   
+INFORMATICA BASICA                                          1                   
+ALGEBRA                                                     1                   
+CALCULO                                                     1                   
+OPTIMIZACION                                                1                   
+GESTION DE RIESGOS                                          1                   
+ASTRONOMIA                                                  1                   
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+ENSENANZA DE LA MATEMATICA                                  1                   
+ANALISIS COMPLEJO                                           1                   
+BASE DE DATOS                                               2                   
+INTELIGENCIA ARTIFICIAL                                     2                   
+ALMACENES DE DATOS                                          2                   
+MINERIA DE DATOS                                            2                   
+INFORMATICA BASICA                                          2                   
+ALGEBRA                                                     2                   
+CALCULO                                                     2                   
+OPTIMIZACION                                                2                   
+GESTION DE RIESGOS                                          2                   
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+ASTRONOMIA                                                  2                   
+ENSENANZA DE LA MATEMATICA                                  2                   
+ANALISIS COMPLEJO                                           2                   
+BASE DE DATOS                                               3                   
+INTELIGENCIA ARTIFICIAL                                     3                   
+ALMACENES DE DATOS                                          3                   
+MINERIA DE DATOS                                            3                   
+INFORMATICA BASICA                                          3                   
+ALGEBRA                                                     3                   
+CALCULO                                                     3                   
+OPTIMIZACION                                                3                   
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+GESTION DE RIESGOS                                          3                   
+ASTRONOMIA                                                  3                   
+ENSENANZA DE LA MATEMATICA                                  3                   
+ANALISIS COMPLEJO                                           3                   
+BASE DE DATOS                                               1                   
+INTELIGENCIA ARTIFICIAL                                     1                   
+ALMACENES DE DATOS                                          1                   
+MINERIA DE DATOS                                            1                   
+INFORMATICA BASICA                                          1                   
+ALGEBRA                                                     1                   
+CALCULO                                                     1                   
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+OPTIMIZACION                                                1                   
+GESTION DE RIESGOS                                          1                   
+ASTRONOMIA                                                  1                   
+ENSENANZA DE LA MATEMATICA                                  1                   
+ANALISIS COMPLEJO                                           1                   
+BASE DE DATOS                                               3                   
+INTELIGENCIA ARTIFICIAL                                     3                   
+ALMACENES DE DATOS                                          3                   
+MINERIA DE DATOS                                            3                   
+INFORMATICA BASICA                                          3                   
+ALGEBRA                                                     3                   
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+CALCULO                                                     3                   
+OPTIMIZACION                                                3                   
+GESTION DE RIESGOS                                          3                   
+ASTRONOMIA                                                  3                   
+ENSENANZA DE LA MATEMATICA                                  3                   
+ANALISIS COMPLEJO                                           3                   
+BASE DE DATOS                                               3                   
+INTELIGENCIA ARTIFICIAL                                     3                   
+ALMACENES DE DATOS                                          3                   
+MINERIA DE DATOS                                            3                   
+INFORMATICA BASICA                                          3                   
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+ALGEBRA                                                     3                   
+CALCULO                                                     3                   
+OPTIMIZACION                                                3                   
+GESTION DE RIESGOS                                          3                   
+ASTRONOMIA                                                  3                   
+ENSENANZA DE LA MATEMATICA                                  3                   
+ANALISIS COMPLEJO                                           3                   
+BASE DE DATOS                                               1                   
+INTELIGENCIA ARTIFICIAL                                     1                   
+ALMACENES DE DATOS                                          1                   
+MINERIA DE DATOS                                            1                   
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+INFORMATICA BASICA                                          1                   
+ALGEBRA                                                     1                   
+CALCULO                                                     1                   
+OPTIMIZACION                                                1                   
+GESTION DE RIESGOS                                          1                   
+ASTRONOMIA                                                  1                   
+ENSENANZA DE LA MATEMATICA                                  1                   
+ANALISIS COMPLEJO                                           1                   
+
+96 rows selected.
+
+SQL> SELECT a,cd FROM asignatura CROSS JOIN area;
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+BASE DE DATOS                                               4                   
+INTELIGENCIA ARTIFICIAL                                     4                   
+ALMACENES DE DATOS                                          4                   
+MINERIA DE DATOS                                            4                   
+INFORMATICA BASICA                                          4                   
+ALGEBRA                                                     4                   
+CALCULO                                                     4                   
+OPTIMIZACION                                                4                   
+GESTION DE RIESGOS                                          4                   
+ASTRONOMIA                                                  4                   
+ENSENANZA DE LA MATEMATICA                                  4                   
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+ANALISIS COMPLEJO                                           4                   
+BASE DE DATOS                                               1                   
+INTELIGENCIA ARTIFICIAL                                     1                   
+ALMACENES DE DATOS                                          1                   
+MINERIA DE DATOS                                            1                   
+INFORMATICA BASICA                                          1                   
+ALGEBRA                                                     1                   
+CALCULO                                                     1                   
+OPTIMIZACION                                                1                   
+GESTION DE RIESGOS                                          1                   
+ASTRONOMIA                                                  1                   
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+ENSENANZA DE LA MATEMATICA                                  1                   
+ANALISIS COMPLEJO                                           1                   
+BASE DE DATOS                                               2                   
+INTELIGENCIA ARTIFICIAL                                     2                   
+ALMACENES DE DATOS                                          2                   
+MINERIA DE DATOS                                            2                   
+INFORMATICA BASICA                                          2                   
+ALGEBRA                                                     2                   
+CALCULO                                                     2                   
+OPTIMIZACION                                                2                   
+GESTION DE RIESGOS                                          2                   
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+ASTRONOMIA                                                  2                   
+ENSENANZA DE LA MATEMATICA                                  2                   
+ANALISIS COMPLEJO                                           2                   
+BASE DE DATOS                                               3                   
+INTELIGENCIA ARTIFICIAL                                     3                   
+ALMACENES DE DATOS                                          3                   
+MINERIA DE DATOS                                            3                   
+INFORMATICA BASICA                                          3                   
+ALGEBRA                                                     3                   
+CALCULO                                                     3                   
+OPTIMIZACION                                                3                   
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+GESTION DE RIESGOS                                          3                   
+ASTRONOMIA                                                  3                   
+ENSENANZA DE LA MATEMATICA                                  3                   
+ANALISIS COMPLEJO                                           3                   
+BASE DE DATOS                                               1                   
+INTELIGENCIA ARTIFICIAL                                     1                   
+ALMACENES DE DATOS                                          1                   
+MINERIA DE DATOS                                            1                   
+INFORMATICA BASICA                                          1                   
+ALGEBRA                                                     1                   
+CALCULO                                                     1                   
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+OPTIMIZACION                                                1                   
+GESTION DE RIESGOS                                          1                   
+ASTRONOMIA                                                  1                   
+ENSENANZA DE LA MATEMATICA                                  1                   
+ANALISIS COMPLEJO                                           1                   
+BASE DE DATOS                                               3                   
+INTELIGENCIA ARTIFICIAL                                     3                   
+ALMACENES DE DATOS                                          3                   
+MINERIA DE DATOS                                            3                   
+INFORMATICA BASICA                                          3                   
+ALGEBRA                                                     3                   
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+CALCULO                                                     3                   
+OPTIMIZACION                                                3                   
+GESTION DE RIESGOS                                          3                   
+ASTRONOMIA                                                  3                   
+ENSENANZA DE LA MATEMATICA                                  3                   
+ANALISIS COMPLEJO                                           3                   
+BASE DE DATOS                                               3                   
+INTELIGENCIA ARTIFICIAL                                     3                   
+ALMACENES DE DATOS                                          3                   
+MINERIA DE DATOS                                            3                   
+INFORMATICA BASICA                                          3                   
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+ALGEBRA                                                     3                   
+CALCULO                                                     3                   
+OPTIMIZACION                                                3                   
+GESTION DE RIESGOS                                          3                   
+ASTRONOMIA                                                  3                   
+ENSENANZA DE LA MATEMATICA                                  3                   
+ANALISIS COMPLEJO                                           3                   
+BASE DE DATOS                                               1                   
+INTELIGENCIA ARTIFICIAL                                     1                   
+ALMACENES DE DATOS                                          1                   
+MINERIA DE DATOS                                            1                   
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+INFORMATICA BASICA                                          1                   
+ALGEBRA                                                     1                   
+CALCULO                                                     1                   
+OPTIMIZACION                                                1                   
+GESTION DE RIESGOS                                          1                   
+ASTRONOMIA                                                  1                   
+ENSENANZA DE LA MATEMATICA                                  1                   
+ANALISIS COMPLEJO                                           1                   
+
+96 rows selected.
+
+SQL> SELECT a,cd FROM asignatura INNER JOIN area ON asignatura.car=area.car;
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+ALGEBRA                                                     4                   
+ANALISIS COMPLEJO                                           1                   
+ASTRONOMIA                                                  2                   
+GESTION DE RIESGOS                                          3                   
+INTELIGENCIA ARTIFICIAL                                     3                   
+ENSENANZA DE LA MATEMATICA                                  1                   
+OPTIMIZACION                                                3                   
+INFORMATICA BASICA                                          3                   
+MINERIA DE DATOS                                            3                   
+ALMACENES DE DATOS                                          3                   
+BASE DE DATOS                                               3                   
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+CALCULO                                                     1                   
+
+12 rows selected.
+
+SQL> SELECT a,cd FROM asignatura LEFT JOIN area ON asignatura.car=area.car;
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+ALGEBRA                                                     4                   
+ANALISIS COMPLEJO                                           1                   
+ASTRONOMIA                                                  2                   
+INTELIGENCIA ARTIFICIAL                                     3                   
+GESTION DE RIESGOS                                          3                   
+ENSENANZA DE LA MATEMATICA                                  1                   
+OPTIMIZACION                                                3                   
+BASE DE DATOS                                               3                   
+ALMACENES DE DATOS                                          3                   
+MINERIA DE DATOS                                            3                   
+INFORMATICA BASICA                                          3                   
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+CALCULO                                                     1                   
+
+12 rows selected.
+
+SQL> SELECT a,cd FROM asignatura RIGH JOIN area ON asignatura.car=area.car;
+SELECT a,cd FROM asignatura RIGH JOIN area ON asignatura.car=area.car
+                                              *
+ERROR at line 1:
+ORA-00904: "ASIGNATURA"."CAR": invalid identifier 
+
+
+SQL> SELECT a,cd FROM asignatura RIGHT JOIN area ON asignatura.car=area.car;
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+ALGEBRA                                                     4                   
+ANALISIS COMPLEJO                                           1                   
+ASTRONOMIA                                                  2                   
+GESTION DE RIESGOS                                          3                   
+INTELIGENCIA ARTIFICIAL                                     3                   
+ENSENANZA DE LA MATEMATICA                                  1                   
+OPTIMIZACION                                                3                   
+INFORMATICA BASICA                                          3                   
+MINERIA DE DATOS                                            3                   
+ALMACENES DE DATOS                                          3                   
+BASE DE DATOS                                               3                   
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+CALCULO                                                     1                   
+
+12 rows selected.
+
+SQL> SELECT a,cd FROM asignatura RIGHT OUTHERR JOIN area ON asignatura.car=area.car;
+SELECT a,cd FROM asignatura RIGHT OUTHERR JOIN area ON asignatura.car=area.car
+                                  *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> SELECT a,cd FROM asignatura RIGHT OUTHER JOIN area ON asignatura.car=area.car;
+SELECT a,cd FROM asignatura RIGHT OUTHER JOIN area ON asignatura.car=area.car
+                                  *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> SELECT a,cd FROM asignatura RIGHT OUTER JOIN area ON asignatura.car=area.car;
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+ALGEBRA                                                     4                   
+ANALISIS COMPLEJO                                           1                   
+ASTRONOMIA                                                  2                   
+GESTION DE RIESGOS                                          3                   
+INTELIGENCIA ARTIFICIAL                                     3                   
+ENSENANZA DE LA MATEMATICA                                  1                   
+OPTIMIZACION                                                3                   
+INFORMATICA BASICA                                          3                   
+MINERIA DE DATOS                                            3                   
+ALMACENES DE DATOS                                          3                   
+BASE DE DATOS                                               3                   
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+CALCULO                                                     1                   
+
+12 rows selected.
+
+SQL> COMMIT WORK;
+
+Commit complete.
+
+SQL> SELECT a FROM asignatura WHERE a LIKE '%DATOS%';
+
+A                                                                               
+--------------------------------------------------                              
+BASE DE DATOS                                                                   
+ALMACENES DE DATOS                                                              
+MINERIA DE DATOS                                                                
+
+SQL> SELECT a,cd FROM asignatura RIGHT OUTER JOIN area ON asignatura.car=area.car;
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+ALGEBRA                                                     4                   
+ANALISIS COMPLEJO                                           1                   
+ASTRONOMIA                                                  2                   
+GESTION DE RIESGOS                                          3                   
+INTELIGENCIA ARTIFICIAL                                     3                   
+ENSENANZA DE LA MATEMATICA                                  1                   
+OPTIMIZACION                                                3                   
+INFORMATICA BASICA                                          3                   
+MINERIA DE DATOS                                            3                   
+ALMACENES DE DATOS                                          3                   
+BASE DE DATOS                                               3                   
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+CALCULO                                                     1                   
+
+12 rows selected.
+
+SQL> INSERT TO AREA VALUES(9,'AREA PARA PRUEBAS');
+INSERT TO AREA VALUES(9,'AREA PARA PRUEBAS')
+       *
+ERROR at line 1:
+ORA-00925: missing INTO keyword 
+
+
+SQL> INSERT INTO AREA VALUES(9,'AREA PARA PRUEBAS');
+INSERT INTO AREA VALUES(9,'AREA PARA PRUEBAS')
+            *
+ERROR at line 1:
+ORA-00947: not enough values 
+
+
+SQL> INSERT INTO AREA VALUES(9,'AREA PARA PRUEBAS',1);
+
+1 row created.
+
+SQL> COMMIT WORK;
+
+Commit complete.
+
+SQL> SELECT a,cd FROM asignatura  JOIN area ON asignatura.car=area.car;
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+ALGEBRA                                                     4                   
+ANALISIS COMPLEJO                                           1                   
+ASTRONOMIA                                                  2                   
+GESTION DE RIESGOS                                          3                   
+INTELIGENCIA ARTIFICIAL                                     3                   
+ENSENANZA DE LA MATEMATICA                                  1                   
+OPTIMIZACION                                                3                   
+INFORMATICA BASICA                                          3                   
+MINERIA DE DATOS                                            3                   
+ALMACENES DE DATOS                                          3                   
+BASE DE DATOS                                               3                   
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+CALCULO                                                     1                   
+
+12 rows selected.
+
+SQL> SELECT a,cd FROM asignatura LEFT JOIN area ON asignatura.car=area.car;
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+ALGEBRA                                                     4                   
+ANALISIS COMPLEJO                                           1                   
+ASTRONOMIA                                                  2                   
+INTELIGENCIA ARTIFICIAL                                     3                   
+GESTION DE RIESGOS                                          3                   
+ENSENANZA DE LA MATEMATICA                                  1                   
+OPTIMIZACION                                                3                   
+BASE DE DATOS                                               3                   
+ALMACENES DE DATOS                                          3                   
+MINERIA DE DATOS                                            3                   
+INFORMATICA BASICA                                          3                   
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+CALCULO                                                     1                   
+
+12 rows selected.
+
+SQL> SELECT a,cd FROM asignatura RIGHT JOIN area ON asignatura.car=area.car;
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+ALGEBRA                                                     4                   
+ANALISIS COMPLEJO                                           1                   
+ASTRONOMIA                                                  2                   
+GESTION DE RIESGOS                                          3                   
+INTELIGENCIA ARTIFICIAL                                     3                   
+ENSENANZA DE LA MATEMATICA                                  1                   
+OPTIMIZACION                                                3                   
+INFORMATICA BASICA                                          3                   
+MINERIA DE DATOS                                            3                   
+ALMACENES DE DATOS                                          3                   
+BASE DE DATOS                                               3                   
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+CALCULO                                                     1                   
+                                                            1                   
+
+13 rows selected.
+
+SQL> SELECT a,cd,ar FROM asignatura RIGHT JOIN area ON asignatura.car=area.car;
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+AR                                                                              
+------------------------------------------------------------                    
+ALGEBRA                                                     4                   
+ALGEBRA                                                                         
+                                                                                
+ANALISIS COMPLEJO                                           1                   
+ANALISIS MATEMATICO                                                             
+                                                                                
+ASTRONOMIA                                                  2                   
+ASTRONOMIA Y ASTROFISICA                                                        
+                                                                                
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+AR                                                                              
+------------------------------------------------------------                    
+GESTION DE RIESGOS                                          3                   
+CIENCIAS DE LA COMPUTACION E INTELIGENCIA ARTIFICIAL                            
+                                                                                
+INTELIGENCIA ARTIFICIAL                                     3                   
+CIENCIAS DE LA COMPUTACION E INTELIGENCIA ARTIFICIAL                            
+                                                                                
+ENSENANZA DE LA MATEMATICA                                  1                   
+DIDACTICA DE LA MATEMATICA                                                      
+                                                                                
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+AR                                                                              
+------------------------------------------------------------                    
+OPTIMIZACION                                                3                   
+ESTADISTICA E INVESTIGACION OPERATIVA                                           
+                                                                                
+INFORMATICA BASICA                                          3                   
+LENGUAJES Y SISTEMAS INFORMATICOS                                               
+                                                                                
+MINERIA DE DATOS                                            3                   
+LENGUAJES Y SISTEMAS INFORMATICOS                                               
+                                                                                
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+AR                                                                              
+------------------------------------------------------------                    
+ALMACENES DE DATOS                                          3                   
+LENGUAJES Y SISTEMAS INFORMATICOS                                               
+                                                                                
+BASE DE DATOS                                               3                   
+LENGUAJES Y SISTEMAS INFORMATICOS                                               
+                                                                                
+CALCULO                                                     1                   
+MATEMATICA APLICADA                                                             
+                                                                                
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+AR                                                                              
+------------------------------------------------------------                    
+                                                            1                   
+AREA PARA PRUEBAS                                                               
+                                                                                
+
+13 rows selected.
+
+SQL> SELECT a,cd,ar FROM asignatura full JOIN area ON asignatura.car=area.car;
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+AR                                                                              
+------------------------------------------------------------                    
+BASE DE DATOS                                               3                   
+LENGUAJES Y SISTEMAS INFORMATICOS                                               
+                                                                                
+INTELIGENCIA ARTIFICIAL                                     3                   
+CIENCIAS DE LA COMPUTACION E INTELIGENCIA ARTIFICIAL                            
+                                                                                
+ALMACENES DE DATOS                                          3                   
+LENGUAJES Y SISTEMAS INFORMATICOS                                               
+                                                                                
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+AR                                                                              
+------------------------------------------------------------                    
+MINERIA DE DATOS                                            3                   
+LENGUAJES Y SISTEMAS INFORMATICOS                                               
+                                                                                
+INFORMATICA BASICA                                          3                   
+LENGUAJES Y SISTEMAS INFORMATICOS                                               
+                                                                                
+ALGEBRA                                                     4                   
+ALGEBRA                                                                         
+                                                                                
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+AR                                                                              
+------------------------------------------------------------                    
+CALCULO                                                     1                   
+MATEMATICA APLICADA                                                             
+                                                                                
+OPTIMIZACION                                                3                   
+ESTADISTICA E INVESTIGACION OPERATIVA                                           
+                                                                                
+GESTION DE RIESGOS                                          3                   
+CIENCIAS DE LA COMPUTACION E INTELIGENCIA ARTIFICIAL                            
+                                                                                
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+AR                                                                              
+------------------------------------------------------------                    
+ASTRONOMIA                                                  2                   
+ASTRONOMIA Y ASTROFISICA                                                        
+                                                                                
+ENSENANZA DE LA MATEMATICA                                  1                   
+DIDACTICA DE LA MATEMATICA                                                      
+                                                                                
+ANALISIS COMPLEJO                                           1                   
+ANALISIS MATEMATICO                                                             
+                                                                                
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+AR                                                                              
+------------------------------------------------------------                    
+                                                            1                   
+AREA PARA PRUEBAS                                                               
+                                                                                
+
+13 rows selected.
+
+SQL> SELECT a,cd,ar FROM asignatura left JOIN area ON asignatura.car=area.car;
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+AR                                                                              
+------------------------------------------------------------                    
+ALGEBRA                                                     4                   
+ALGEBRA                                                                         
+                                                                                
+ANALISIS COMPLEJO                                           1                   
+ANALISIS MATEMATICO                                                             
+                                                                                
+ASTRONOMIA                                                  2                   
+ASTRONOMIA Y ASTROFISICA                                                        
+                                                                                
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+AR                                                                              
+------------------------------------------------------------                    
+INTELIGENCIA ARTIFICIAL                                     3                   
+CIENCIAS DE LA COMPUTACION E INTELIGENCIA ARTIFICIAL                            
+                                                                                
+GESTION DE RIESGOS                                          3                   
+CIENCIAS DE LA COMPUTACION E INTELIGENCIA ARTIFICIAL                            
+                                                                                
+ENSENANZA DE LA MATEMATICA                                  1                   
+DIDACTICA DE LA MATEMATICA                                                      
+                                                                                
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+AR                                                                              
+------------------------------------------------------------                    
+OPTIMIZACION                                                3                   
+ESTADISTICA E INVESTIGACION OPERATIVA                                           
+                                                                                
+BASE DE DATOS                                               3                   
+LENGUAJES Y SISTEMAS INFORMATICOS                                               
+                                                                                
+ALMACENES DE DATOS                                          3                   
+LENGUAJES Y SISTEMAS INFORMATICOS                                               
+                                                                                
+
+A                                                          CD                   
+-------------------------------------------------- ----------                   
+AR                                                                              
+------------------------------------------------------------                    
+MINERIA DE DATOS                                            3                   
+LENGUAJES Y SISTEMAS INFORMATICOS                                               
+                                                                                
+INFORMATICA BASICA                                          3                   
+LENGUAJES Y SISTEMAS INFORMATICOS                                               
+                                                                                
+CALCULO                                                     1                   
+MATEMATICA APLICADA                                                             
+                                                                                
+
+12 rows selected.
+
+SQL> SELECT dni FROM PROFESOR WHERE p='__R%'
+  2  
+SQL> SELECT dni FROM PROFESOR WHERE p='__R%';
+
+no rows selected
+
+SQL> SELECT dni FROM PROFESOR WHERE p LIKE '__R%';
+
+       DNI                                                                      
+----------                                                                      
+      2222                                                                      
+      4444                                                                      
+      6666                                                                      
+      7777                                                                      
+
+SQL> SELECT DISTINCT dni FROM PROFESOR WHERE p LIKE '____';
+
+       DNI                                                                      
+----------                                                                      
+      1111                                                                      
+      5555                                                                      
+
+SQL> SELECT DISTINCT dni FROM PROFESOR WHERE p LIKE '_____';
+
+       DNI                                                                      
+----------                                                                      
+      3333                                                                      
+      4444                                                                      
+      7777                                                                      
+      1010                                                                      
+
+SQL> SELECT DISTINCT dni FROM PROFESOR WHERE p LIKE '_____%';
+
+       DNI                                                                      
+----------                                                                      
+      2222                                                                      
+      3333                                                                      
+      4444                                                                      
+      6666                                                                      
+      7777                                                                      
+      8888                                                                      
+      9999                                                                      
+      1010                                                                      
+      2020                                                                      
+      3030                                                                      
+
+10 rows selected.
+
+SQL> SELECT DISTINCT dni,P FROM PROFESOR WHERE p LIKE '_____%';
+
+       DNI P                                                                    
+---------- ------------------------------------------------------------         
+      2222 CARLOS                                                               
+      3333 PEDRO                                                                
+      4444 MARIA                                                                
+      6666 CARMEN                                                               
+      7777 MARIO                                                                
+      8888 FRANCISCO                                                            
+      9999 ANGELA                                                               
+      1010 DAVID                                                                
+      2020 SOLEDAD                                                              
+      3030 JOSE MANUEL                                                          
+
+10 rows selected.
+
+SQL> SELECT DISTINCT dni,P FROM PROFESOR WHERE p NOT LIKE '_____%';
+
+       DNI P                                                                    
+---------- ------------------------------------------------------------         
+      1111 JUAN                                                                 
+      5555 IVAN                                                                 
+
+SQL> SELECT p FROM profesor p INNER JOIN plan_docente pd ON p.dni=pd.dni WHERE FF IS NULL;
+
+P                                                                               
+------------------------------------------------------------                    
+DAVID                                                                           
+JUAN                                                                            
+SOLEDAD                                                                         
+CARLOS                                                                          
+JOSE MANUEL                                                                     
+PEDRO                                                                           
+PEDRO                                                                           
+MARIA                                                                           
+MARIA                                                                           
+IVAN                                                                            
+MARIO                                                                           
+
+P                                                                               
+------------------------------------------------------------                    
+FRANCISCO                                                                       
+ANGELA                                                                          
+
+13 rows selected.
+
+SQL> SELECT p FROM profesor p INNER JOIN plan_docente pd ON p.dni=pd.dni WHERE FF IS NULL;
+
+P                                                                               
+------------------------------------------------------------                    
+DAVID                                                                           
+JUAN                                                                            
+SOLEDAD                                                                         
+CARLOS                                                                          
+JOSE MANUEL                                                                     
+PEDRO                                                                           
+PEDRO                                                                           
+MARIA                                                                           
+MARIA                                                                           
+IVAN                                                                            
+MARIO                                                                           
+
+P                                                                               
+------------------------------------------------------------                    
+FRANCISCO                                                                       
+ANGELA                                                                          
+
+13 rows selected.
+
+SQL> SELECT p,cas FROM profesor p INNER JOIN plan_docente pd ON p.dni=pd.dni WHERE FF IS NULL;
+
+P                                                                   CAS         
+------------------------------------------------------------ ----------         
+DAVID                                                                 9         
+JUAN                                                                  8         
+SOLEDAD                                                               3         
+CARLOS                                                                4         
+JOSE MANUEL                                                           8         
+PEDRO                                                                 2         
+PEDRO                                                                 9         
+MARIA                                                                 5         
+MARIA                                                                 1         
+IVAN                                                                  6         
+MARIO                                                                12         
+
+P                                                                   CAS         
+------------------------------------------------------------ ----------         
+FRANCISCO                                                            11         
+ANGELA                                                                7         
+
+13 rows selected.
+
+SQL> SELECT p,a from asignatura, (SELECT p,cas FROM profesor p INNER JOIN plan_docente pd ON p.dni=pd.dni WHERE FF IS NULL);
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+MARIA                                                                           
+BASE DE DATOS                                                                   
+                                                                                
+MARIA                                                                           
+INTELIGENCIA ARTIFICIAL                                                         
+                                                                                
+MARIA                                                                           
+ALMACENES DE DATOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+MARIA                                                                           
+MINERIA DE DATOS                                                                
+                                                                                
+MARIA                                                                           
+INFORMATICA BASICA                                                              
+                                                                                
+MARIA                                                                           
+ALGEBRA                                                                         
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+MARIA                                                                           
+CALCULO                                                                         
+                                                                                
+MARIA                                                                           
+OPTIMIZACION                                                                    
+                                                                                
+MARIA                                                                           
+GESTION DE RIESGOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+MARIA                                                                           
+ASTRONOMIA                                                                      
+                                                                                
+MARIA                                                                           
+ENSENANZA DE LA MATEMATICA                                                      
+                                                                                
+MARIA                                                                           
+ANALISIS COMPLEJO                                                               
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+MARIA                                                                           
+BASE DE DATOS                                                                   
+                                                                                
+MARIA                                                                           
+INTELIGENCIA ARTIFICIAL                                                         
+                                                                                
+MARIA                                                                           
+ALMACENES DE DATOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+MARIA                                                                           
+MINERIA DE DATOS                                                                
+                                                                                
+MARIA                                                                           
+INFORMATICA BASICA                                                              
+                                                                                
+MARIA                                                                           
+ALGEBRA                                                                         
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+MARIA                                                                           
+CALCULO                                                                         
+                                                                                
+MARIA                                                                           
+OPTIMIZACION                                                                    
+                                                                                
+MARIA                                                                           
+GESTION DE RIESGOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+MARIA                                                                           
+ASTRONOMIA                                                                      
+                                                                                
+MARIA                                                                           
+ENSENANZA DE LA MATEMATICA                                                      
+                                                                                
+MARIA                                                                           
+ANALISIS COMPLEJO                                                               
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+JUAN                                                                            
+BASE DE DATOS                                                                   
+                                                                                
+JUAN                                                                            
+INTELIGENCIA ARTIFICIAL                                                         
+                                                                                
+JUAN                                                                            
+ALMACENES DE DATOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+JUAN                                                                            
+MINERIA DE DATOS                                                                
+                                                                                
+JUAN                                                                            
+INFORMATICA BASICA                                                              
+                                                                                
+JUAN                                                                            
+ALGEBRA                                                                         
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+JUAN                                                                            
+CALCULO                                                                         
+                                                                                
+JUAN                                                                            
+OPTIMIZACION                                                                    
+                                                                                
+JUAN                                                                            
+GESTION DE RIESGOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+JUAN                                                                            
+ASTRONOMIA                                                                      
+                                                                                
+JUAN                                                                            
+ENSENANZA DE LA MATEMATICA                                                      
+                                                                                
+JUAN                                                                            
+ANALISIS COMPLEJO                                                               
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+JOSE MANUEL                                                                     
+BASE DE DATOS                                                                   
+                                                                                
+JOSE MANUEL                                                                     
+INTELIGENCIA ARTIFICIAL                                                         
+                                                                                
+JOSE MANUEL                                                                     
+ALMACENES DE DATOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+JOSE MANUEL                                                                     
+MINERIA DE DATOS                                                                
+                                                                                
+JOSE MANUEL                                                                     
+INFORMATICA BASICA                                                              
+                                                                                
+JOSE MANUEL                                                                     
+ALGEBRA                                                                         
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+JOSE MANUEL                                                                     
+CALCULO                                                                         
+                                                                                
+JOSE MANUEL                                                                     
+OPTIMIZACION                                                                    
+                                                                                
+JOSE MANUEL                                                                     
+GESTION DE RIESGOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+JOSE MANUEL                                                                     
+ASTRONOMIA                                                                      
+                                                                                
+JOSE MANUEL                                                                     
+ENSENANZA DE LA MATEMATICA                                                      
+                                                                                
+JOSE MANUEL                                                                     
+ANALISIS COMPLEJO                                                               
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+CARLOS                                                                          
+BASE DE DATOS                                                                   
+                                                                                
+CARLOS                                                                          
+INTELIGENCIA ARTIFICIAL                                                         
+                                                                                
+CARLOS                                                                          
+ALMACENES DE DATOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+CARLOS                                                                          
+MINERIA DE DATOS                                                                
+                                                                                
+CARLOS                                                                          
+INFORMATICA BASICA                                                              
+                                                                                
+CARLOS                                                                          
+ALGEBRA                                                                         
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+CARLOS                                                                          
+CALCULO                                                                         
+                                                                                
+CARLOS                                                                          
+OPTIMIZACION                                                                    
+                                                                                
+CARLOS                                                                          
+GESTION DE RIESGOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+CARLOS                                                                          
+ASTRONOMIA                                                                      
+                                                                                
+CARLOS                                                                          
+ENSENANZA DE LA MATEMATICA                                                      
+                                                                                
+CARLOS                                                                          
+ANALISIS COMPLEJO                                                               
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+PEDRO                                                                           
+BASE DE DATOS                                                                   
+                                                                                
+PEDRO                                                                           
+INTELIGENCIA ARTIFICIAL                                                         
+                                                                                
+PEDRO                                                                           
+ALMACENES DE DATOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+PEDRO                                                                           
+MINERIA DE DATOS                                                                
+                                                                                
+PEDRO                                                                           
+INFORMATICA BASICA                                                              
+                                                                                
+PEDRO                                                                           
+ALGEBRA                                                                         
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+PEDRO                                                                           
+CALCULO                                                                         
+                                                                                
+PEDRO                                                                           
+OPTIMIZACION                                                                    
+                                                                                
+PEDRO                                                                           
+GESTION DE RIESGOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+PEDRO                                                                           
+ASTRONOMIA                                                                      
+                                                                                
+PEDRO                                                                           
+ENSENANZA DE LA MATEMATICA                                                      
+                                                                                
+PEDRO                                                                           
+ANALISIS COMPLEJO                                                               
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+DAVID                                                                           
+BASE DE DATOS                                                                   
+                                                                                
+DAVID                                                                           
+INTELIGENCIA ARTIFICIAL                                                         
+                                                                                
+DAVID                                                                           
+ALMACENES DE DATOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+DAVID                                                                           
+MINERIA DE DATOS                                                                
+                                                                                
+DAVID                                                                           
+INFORMATICA BASICA                                                              
+                                                                                
+DAVID                                                                           
+ALGEBRA                                                                         
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+DAVID                                                                           
+CALCULO                                                                         
+                                                                                
+DAVID                                                                           
+OPTIMIZACION                                                                    
+                                                                                
+DAVID                                                                           
+GESTION DE RIESGOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+DAVID                                                                           
+ASTRONOMIA                                                                      
+                                                                                
+DAVID                                                                           
+ENSENANZA DE LA MATEMATICA                                                      
+                                                                                
+DAVID                                                                           
+ANALISIS COMPLEJO                                                               
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+ANGELA                                                                          
+BASE DE DATOS                                                                   
+                                                                                
+ANGELA                                                                          
+INTELIGENCIA ARTIFICIAL                                                         
+                                                                                
+ANGELA                                                                          
+ALMACENES DE DATOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+ANGELA                                                                          
+MINERIA DE DATOS                                                                
+                                                                                
+ANGELA                                                                          
+INFORMATICA BASICA                                                              
+                                                                                
+ANGELA                                                                          
+ALGEBRA                                                                         
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+ANGELA                                                                          
+CALCULO                                                                         
+                                                                                
+ANGELA                                                                          
+OPTIMIZACION                                                                    
+                                                                                
+ANGELA                                                                          
+GESTION DE RIESGOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+ANGELA                                                                          
+ASTRONOMIA                                                                      
+                                                                                
+ANGELA                                                                          
+ENSENANZA DE LA MATEMATICA                                                      
+                                                                                
+ANGELA                                                                          
+ANALISIS COMPLEJO                                                               
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+IVAN                                                                            
+BASE DE DATOS                                                                   
+                                                                                
+IVAN                                                                            
+INTELIGENCIA ARTIFICIAL                                                         
+                                                                                
+IVAN                                                                            
+ALMACENES DE DATOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+IVAN                                                                            
+MINERIA DE DATOS                                                                
+                                                                                
+IVAN                                                                            
+INFORMATICA BASICA                                                              
+                                                                                
+IVAN                                                                            
+ALGEBRA                                                                         
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+IVAN                                                                            
+CALCULO                                                                         
+                                                                                
+IVAN                                                                            
+OPTIMIZACION                                                                    
+                                                                                
+IVAN                                                                            
+GESTION DE RIESGOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+IVAN                                                                            
+ASTRONOMIA                                                                      
+                                                                                
+IVAN                                                                            
+ENSENANZA DE LA MATEMATICA                                                      
+                                                                                
+IVAN                                                                            
+ANALISIS COMPLEJO                                                               
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+FRANCISCO                                                                       
+BASE DE DATOS                                                                   
+                                                                                
+FRANCISCO                                                                       
+INTELIGENCIA ARTIFICIAL                                                         
+                                                                                
+FRANCISCO                                                                       
+ALMACENES DE DATOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+FRANCISCO                                                                       
+MINERIA DE DATOS                                                                
+                                                                                
+FRANCISCO                                                                       
+INFORMATICA BASICA                                                              
+                                                                                
+FRANCISCO                                                                       
+ALGEBRA                                                                         
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+FRANCISCO                                                                       
+CALCULO                                                                         
+                                                                                
+FRANCISCO                                                                       
+OPTIMIZACION                                                                    
+                                                                                
+FRANCISCO                                                                       
+GESTION DE RIESGOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+FRANCISCO                                                                       
+ASTRONOMIA                                                                      
+                                                                                
+FRANCISCO                                                                       
+ENSENANZA DE LA MATEMATICA                                                      
+                                                                                
+FRANCISCO                                                                       
+ANALISIS COMPLEJO                                                               
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+SOLEDAD                                                                         
+BASE DE DATOS                                                                   
+                                                                                
+SOLEDAD                                                                         
+INTELIGENCIA ARTIFICIAL                                                         
+                                                                                
+SOLEDAD                                                                         
+ALMACENES DE DATOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+SOLEDAD                                                                         
+MINERIA DE DATOS                                                                
+                                                                                
+SOLEDAD                                                                         
+INFORMATICA BASICA                                                              
+                                                                                
+SOLEDAD                                                                         
+ALGEBRA                                                                         
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+SOLEDAD                                                                         
+CALCULO                                                                         
+                                                                                
+SOLEDAD                                                                         
+OPTIMIZACION                                                                    
+                                                                                
+SOLEDAD                                                                         
+GESTION DE RIESGOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+SOLEDAD                                                                         
+ASTRONOMIA                                                                      
+                                                                                
+SOLEDAD                                                                         
+ENSENANZA DE LA MATEMATICA                                                      
+                                                                                
+SOLEDAD                                                                         
+ANALISIS COMPLEJO                                                               
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+MARIO                                                                           
+BASE DE DATOS                                                                   
+                                                                                
+MARIO                                                                           
+INTELIGENCIA ARTIFICIAL                                                         
+                                                                                
+MARIO                                                                           
+ALMACENES DE DATOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+MARIO                                                                           
+MINERIA DE DATOS                                                                
+                                                                                
+MARIO                                                                           
+INFORMATICA BASICA                                                              
+                                                                                
+MARIO                                                                           
+ALGEBRA                                                                         
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+MARIO                                                                           
+CALCULO                                                                         
+                                                                                
+MARIO                                                                           
+OPTIMIZACION                                                                    
+                                                                                
+MARIO                                                                           
+GESTION DE RIESGOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+MARIO                                                                           
+ASTRONOMIA                                                                      
+                                                                                
+MARIO                                                                           
+ENSENANZA DE LA MATEMATICA                                                      
+                                                                                
+MARIO                                                                           
+ANALISIS COMPLEJO                                                               
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+PEDRO                                                                           
+BASE DE DATOS                                                                   
+                                                                                
+PEDRO                                                                           
+INTELIGENCIA ARTIFICIAL                                                         
+                                                                                
+PEDRO                                                                           
+ALMACENES DE DATOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+PEDRO                                                                           
+MINERIA DE DATOS                                                                
+                                                                                
+PEDRO                                                                           
+INFORMATICA BASICA                                                              
+                                                                                
+PEDRO                                                                           
+ALGEBRA                                                                         
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+PEDRO                                                                           
+CALCULO                                                                         
+                                                                                
+PEDRO                                                                           
+OPTIMIZACION                                                                    
+                                                                                
+PEDRO                                                                           
+GESTION DE RIESGOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+PEDRO                                                                           
+ASTRONOMIA                                                                      
+                                                                                
+PEDRO                                                                           
+ENSENANZA DE LA MATEMATICA                                                      
+                                                                                
+PEDRO                                                                           
+ANALISIS COMPLEJO                                                               
+                                                                                
+
+156 rows selected.
+
+SQL> SELECT p,a from asignatura a JOIN  (SELECT p,cas FROM profesor p INNER JOIN plan_docente pd ON p.dni=pd.dni WHERE FF IS NULL) b ON a.cas=b.cas;
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+JUAN                                                                            
+OPTIMIZACION                                                                    
+                                                                                
+CARLOS                                                                          
+MINERIA DE DATOS                                                                
+                                                                                
+PEDRO                                                                           
+INTELIGENCIA ARTIFICIAL                                                         
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+PEDRO                                                                           
+GESTION DE RIESGOS                                                              
+                                                                                
+MARIA                                                                           
+BASE DE DATOS                                                                   
+                                                                                
+MARIA                                                                           
+INFORMATICA BASICA                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+IVAN                                                                            
+ALGEBRA                                                                         
+                                                                                
+MARIO                                                                           
+ANALISIS COMPLEJO                                                               
+                                                                                
+FRANCISCO                                                                       
+ENSENANZA DE LA MATEMATICA                                                      
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+ANGELA                                                                          
+CALCULO                                                                         
+                                                                                
+DAVID                                                                           
+GESTION DE RIESGOS                                                              
+                                                                                
+SOLEDAD                                                                         
+ALMACENES DE DATOS                                                              
+                                                                                
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+JOSE MANUEL                                                                     
+OPTIMIZACION                                                                    
+                                                                                
+
+13 rows selected.
+
+SQL> SELECT p,a from asignatura a JOIN  (SELECT p,cas FROM profesor p INNER JOIN plan_docente pd ON p.dni=pd.dni WHERE FF IS NULL) b ON a.cas=b.cas;
+
+P                                                                               
+------------------------------------------------------------                    
+A                                                                               
+--------------------------------------------------                              
+JUAN                                                                            
+OPTIMIZACION                                                                    
+                                                                                
+CARLOS                                                                          
+MINERIA DE DATOS              
